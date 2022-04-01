@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <list>
 #include <algorithm>
 #include <iterator>
@@ -7,7 +7,8 @@ using namespace std;
 
 
 bool isOdd(int num) {
-    return (num & 1);
+    if (num % 2 == 0)
+    return 1;
 }
 
 int main() {
