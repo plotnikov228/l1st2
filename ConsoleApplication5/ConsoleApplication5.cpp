@@ -3,12 +3,15 @@
 #include <algorithm>
 #include <iterator>
 
+using namespace std;
+
+
 bool isOdd(int num) {
     return (num & 1);
 }
 
 int main() {
-    std::list<int> L;
+    list<int> L;
     L.push_back(5);
     L.push_back(2);
     L.push_back(6);
@@ -17,15 +20,15 @@ int main() {
     L.push_back(3);
     L.push_back(8);
 
-    std::cout << "All list:" << std::endl;
-    std::copy(L.begin(), L.end(), std::ostream_iterator<int>(std::cout, " "));
+    cout << "All list:" << endl;
+    copy(L.begin(), L.end(), ostream_iterator<int>(cout, " "));
 
     L.remove_if(isOdd);
 
-    std::cout << std::endl << "Without odds:" << std::endl;
-    std::copy(L.begin(), L.end(), std::ostream_iterator<int>(std::cout, " "));
+    cout << endl << "Without odds:" << endl;
+    copy(L.begin(), L.end(), ostream_iterator<int>(cout, " "));
 
-    std::cout << std::endl;
+    cout << endl;
 
     return 0;
 }
